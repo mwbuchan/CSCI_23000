@@ -1,0 +1,29 @@
+''' The goal here is to tell a sweet knock knock joke    
+2  -    Created by Maggie Buchanan    
+3  -    for CSCI 23000    
+4  -    Jennifer Emery is a beautiful human for helping me when I have all the errors    
+5  -    '''    
+6  -    
+7  -# I'm going to ask for the user's name    
+8  -name = input("What is your name? ")    
+9  -    
+10  -# I'm asking the user if they want to hear a knock knock joke    
+11  -answer = input("Hi " + name + ", do you want to hear a knock knock joke? ")    
+12  -    
+13  -# If they say 'no', I'm going to tell the joke anyway and allow them to respond    
+14  -if answer == ("yes"):    
+15  -    who = input("Awesome! Knock knock! ")    
+16  -else:    
+17  -    who = input("Too bad! Knock knock! ")    
+18  -    
+19  -# I want the user to say 'Who's there?', so I'll correct them if they don't    
+20  -while who != ("whos there?"):    
+21  -    who = input("No, this is a knock knock joke, so say 'whos there?' ")    
+22  -else:    
+23  -    response = input("Little old lady! ")    
+24  -    
+25  -# I want the user to say 'Little old lady who?' in some way, so I will correct the user if they don't    
+26  -while response != ("little old lady who?"):    
+27  -    response = input("No, you're supposed to say 'Little old lady who?' You don't understand knock knock jokes, do you? ")    
+28  -else:    
+29  -    print("I didn't know you could yodel! Thanks for being patient!")  
