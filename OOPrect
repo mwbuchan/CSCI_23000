@@ -1,0 +1,57 @@
+''' Maggie Buchanan    
+3  -    CSCI 23000    
+4  -    OOP Rectangle    
+5  -    '''    
+6  -    
+7  -def main():    
+8  -    print ("Rectangle a:")    
+9  -    a = Rectangle(5, 7)    
+10  -    print ("area:           {}".format(a.area))    
+11  -    print ("perimeter:      {}".format(a.perimeter))    
+12  -        
+13  -    print ("")    
+14  -    print ("Rectangle b:")    
+15  -    b = Rectangle()    
+16  -    b.width = 10    
+17  -    b.height = 20    
+18  -    print (b.getStats())    
+19  -    
+20  -        
+21  -class Rectangle(object):    
+22  -    def __init__(self, height = 10, width = 6):    
+23  -            
+24  -            self.__Height = height    
+25  -            self.__Width = width    
+26  -    
+27  -            
+28  -    def getArea(self):    
+29  -            
+30  -        return (self.__Height*self.__Width)    
+31  -    
+32  -    def getPerimeter(self):    
+33  -        return (2*self.__Height+2*self.__Width)    
+34  -    
+35  -    def setHeight(self, tall):    
+36  -        self.__Height = tall    
+37  -    
+38  -    def setWidth(self, wide):    
+39  -        self.__Width = wide    
+40  -    
+41  -    def getHeight(self):    
+42  -        return self.__Height    
+43  -    
+44  -    def getWidth(self):    
+45  -        return self.__Width    
+46  -    
+47  -    def getStats(self):    
+48  -        return ("Width:    \t{}".format(self.getWidth())    
+49  -                +"\nHeight:   \t{}".format(self.getHeight())    
+50  -                +"\nArea:    \t{}".format(self.getArea())    
+51  -                +"\nPerimeter: \t{}".format(self.getPerimeter()))    
+52  -    
+53  -    width = property(fget = getWidth, fset = setWidth)    
+54  -    height = property(fget = getHeight, fset = setHeight)    
+55  -    area = property(fget = getArea)    
+56  -    perimeter = property(fget = getPerimeter)    
+57  -    
+58  -main()  
