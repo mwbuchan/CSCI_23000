@@ -1,0 +1,42 @@
+''' HIGH low  
+  2  +    Created by Maggie Buchanan  
+  3  +    CSCI 23000  
+  4  +    10/16/15'''  
+  5  +# random integer from 1-100 is generated  
+  6  +import random  
+  7  +correct = random.randint(1,101)  
+  8  +# the first guess they have is 1 turn  
+  9  +turn = 1  
+  10  +keepGoing = True  
+  11  +# introduces user to game  
+  12  +print("Hi, welcome to the Great Number Debacle!")  
+  13  +print("I will think of a number from 1 to 100,")  
+  14  +print("and you must guess what I'm thinking of.")  
+  15  +user = input("What will be your first guess? ")  
+  16  +while keepGoing:  
+  17  +    try:  
+  18  +        # if the user's guess is less than the correct integer  
+  19  +        if int(user) < correct:  
+  20  +            user = int(input("Too low! Pick again! "))  
+  21  +            # add one to the number of guesses  
+  22  +            turn += 1  
+  23  +        # if the guess is greater than the correct integer  
+  24  +        elif int(user) > correct:  
+  25  +            user = int(input("Too high! Pick again! "))  
+  26  +            # add one to the number of guesses  
+  27  +            turn += 1  
+  28  +            keepGoing  
+  29  +        # if the user guesses the correct number      
+  30  +        elif int(user) == correct:  
+  31  +            # break out of the loop  
+  32  +            keepGoing == False  
+  33  +    # if the user enters a value that can't be converted to an integer  
+  34  +    except ValueError:  
+  35  +        user = int(input("Is that even a number? Try to stick with integers from 1-100. "))  
+  36  +        turn += 1  
+  37  +        continue  
+  38  +          
+  39  +          
+  40  +turn = str(turn)  
+  41  +print("How did you know? You only took " + turn + " turns! Thanks for playing!")  
+  42  +        
